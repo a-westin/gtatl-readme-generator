@@ -66,7 +66,12 @@ function writeToFile(fileName, data) {
 }
 
 // function to initialize program
-function init() {}
+function init() {
+  inquirer
+    .prompt(questions)
+    .then((fileName, data) => writeToFile(fileName, data))
+    .catch((err) => console.log(err));
+}
 
 // function call to initialize program
 init();
