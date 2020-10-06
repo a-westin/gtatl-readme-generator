@@ -3,7 +3,7 @@
 
   ## Description  
 
-  This project showcases a CLI that generates the basic outline for a well-founded ReadMe document. A series of input questions prompt the user for information, which will be used   to create the final Markdown document.   
+  This project showcases a CLI that generates the basic outline for a well-founded ReadMe document. A series of input questions prompt the user for information, which will be used   to create the final Markdown document. View the Screencastify walkthrough video [here.](https://drive.google.com/file/d/1JYJbzurSLy42A82Q3bs_kZFhQKv0cPZq/view)
   
   ![Screen Shot 2020-10-06 at 1 12 29 AM](https://user-images.githubusercontent.com/69770137/95161700-da4b5100-0771-11eb-9225-45004b62f88d.png)
 
