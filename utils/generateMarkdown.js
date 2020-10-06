@@ -76,6 +76,26 @@ function generateMarkdown(data) {
       break;
   }
 
+  for (let i = 0; i < data.badges.length; i++) {
+    if (data.badges[i] === "Built With Love") {
+      badgeLink =
+        badgeLink +
+        `[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)`;
+    } else if (data.badges[i] === "GitHub Issues") {
+      badgeLink =
+        badgeLink +
+        `[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/)`;
+    } else if (data.badges[i] === "GitHub Pull Requests") {
+      badgeLink =
+        badgeLink +
+        `[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/pull/)`;
+    } else if (data.badges[i] === "Contains Cat GIFS") {
+      badgeLink =
+        badgeLink +
+        `[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://forthebadge.com)`;
+    }
+  }
+
   return `# ${data.title}
 
 `;

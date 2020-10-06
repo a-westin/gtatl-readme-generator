@@ -47,9 +47,10 @@ const questions = [
   },
   {
     type: "checkbox",
-    message: "Please choose any badges you'd like to add",
+    message: "Please choose any badge(s) you'd like to add",
+    name: "badges",
     choices: [
-      "Built with Love",
+      "Built With Love",
       "GitHub Issues",
       "GitHub Pull Requests",
       "Contains Cat GIFS",
