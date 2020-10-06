@@ -97,7 +97,54 @@ function generateMarkdown(data) {
   }
 
   return `# ${data.title}
+  ${badgeLink} ${licenseCopy} 
 
+  ## Description  
+
+  ******
+
+  ### ${data.description}  
+
+  ******
+
+  ## Table of Contents 
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributions](#guidelines)
+  * [Tests](#testing)
+  * [License](#license)
+  * [Questions](#questions)  
+  
+  ******
+
+  ## Installation
+  ${data.installation}  
+
+  ******
+
+  ### Usage
+  ${data.usage}  
+
+  ******
+
+  ### Contributions 
+  ${data.guidelines}  
+
+  ******
+
+  ### Tests
+  ${data.testing}  
+
+  ******
+
+  #### License
+  ${data.license}  
+
+  ******
+
+  ##### Questions
+
+  Anything I missed? If you have additional questions, connect with me on [GitHub](https://github.com/${data.ghUsername}) or [email me](MAILTO:${data.email})
 `;
 }
 
