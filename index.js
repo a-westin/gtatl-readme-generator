@@ -40,7 +40,7 @@ const questions = [
     name: "testing",
   },
   {
-    type: "checkbox",
+    type: "list",
     message: "Please choose a license.",
     name: "license",
     choices: ["MIT", "Boost Software 1.0", "The Unlicense"],
@@ -50,9 +50,9 @@ const questions = [
     message: "Please choose any badge(s) you'd like to add",
     name: "badges",
     choices: [
-      "Built With Love",
       "GitHub Issues",
       "GitHub Pull Requests",
+      "Built With Love",
       "Contains Cat GIFS",
     ],
   },
@@ -69,8 +69,8 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile("goodReadMe.md", generateMarkdown(fileName, data), (err) => {
+function writeToFile(data) {
+  fs.writeFile("goodReadMe.md", generateMarkdown(data), (err) => {
     if (err) throw err;
     console.log("File written!");
   });
@@ -80,7 +80,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer
     .prompt(questions)
-    .then((fileName, data) => writeToFile(fileName, data))
+    .then((data) => writeToFile(data))
     .catch((err) => console.log(err));
 }
 

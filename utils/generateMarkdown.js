@@ -1,24 +1,30 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  let license = "";
   let badgeLink = "";
-  let licenseCopy = "";
 
   switch (data.license) {
     case "MIT":
-      licenseCopy = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+      license = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-    Copyright 2020 ${data.ghUsername}
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    Permission is hereby granted, free of charge, to any person obtaining a copy of 
+    this software and associated documentation files (the "Software"), to deal in the 
+    Software without restriction, including without limitation the rights to use, copy, 
+    modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, 
+    and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
-    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    The above copyright notice and this permission notice shall be included in all copies or 
+    substantial portions of the Software.
     
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+    AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+    Copyright 2020 ${data.ghUsername}`;
       break;
     case "Boost Software 1.0":
-      licenseCopy = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
-
-    Copyright 2020 ${data.ghUsername}
+      license = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
     Boost Software License - Version 1.0 - August 17th, 2003
 
@@ -42,12 +48,11 @@ function generateMarkdown(data) {
     SHALL THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE
     FOR ANY DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE,
     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-    DEALINGS IN THE SOFTWARE.`;
+    DEALINGS IN THE SOFTWARE.  
+    Copyright 2020 ${data.ghUsername}`;
       break;
     case "The Unlicense":
-      licenseCopy = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-      
-    Copyright 2020 ${data.ghUsername}
+      license = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
     This is free and unencumbered software released into the public domain.
 
@@ -72,16 +77,13 @@ function generateMarkdown(data) {
     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
     OTHER DEALINGS IN THE SOFTWARE.
       
-    For more information, please refer to <https://unlicense.org>`;
+    For more information, please refer to <https://unlicense.org>  
+    Copyright 2020 ${data.ghUsername}`;
       break;
   }
 
   for (let i = 0; i < data.badges.length; i++) {
-    if (data.badges[i] === "Built With Love") {
-      badgeLink =
-        badgeLink +
-        `[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)`;
-    } else if (data.badges[i] === "GitHub Issues") {
+    if (data.badges[i] === "GitHub Issues") {
       badgeLink =
         badgeLink +
         `[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/)`;
@@ -89,6 +91,10 @@ function generateMarkdown(data) {
       badgeLink =
         badgeLink +
         `[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/pull/)`;
+    } else if (data.badges[i] === "Built With Love") {
+      badgeLink =
+        badgeLink +
+        `[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)`;
     } else if (data.badges[i] === "Contains Cat GIFS") {
       badgeLink =
         badgeLink +
@@ -96,8 +102,8 @@ function generateMarkdown(data) {
     }
   }
 
-  return `# ${data.title}
-  ${badgeLink} ${licenseCopy} 
+  return `# ${data.title}  
+  ${badgeLink} 
 
   ## Description  
 
@@ -136,7 +142,7 @@ function generateMarkdown(data) {
   ******
 
   #### License
-  ${data.license}  
+  ${license}  
 
   ******
 
