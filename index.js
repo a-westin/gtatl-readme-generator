@@ -46,6 +46,16 @@ const questions = [
     choices: ["MIT", "Mozilla", "ODbl", "IBM"],
   },
   {
+    type: "checkbox",
+    message: "Please choose any badges you'd like to add",
+    choices: [
+      "Built with Love",
+      "GitHub Issues",
+      "GitHub Pull Requests",
+      "Contains Cat GIFS",
+    ],
+  },
+  {
     type: "input",
     message: "What is your GitHub username?",
     name: "ghUsername",
