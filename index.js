@@ -58,7 +58,12 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  fs.writeFile("goodReadMe.md", generateMarkdown(fileName, data), (err) => {
+    if (err) throw err;
+    console.log("File written!");
+  });
+}
 
 // function to initialize program
 function init() {}
