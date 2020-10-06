@@ -4,6 +4,8 @@
   ## Description  
 
   This project showcases a CLI that generates the basic outline for a well-founded ReadMe document. A series of input questions prompt the user for information, which will be used   to create the final Markdown document.   
+  
+  ![Screen Shot 2020-10-06 at 1 12 29 AM](https://user-images.githubusercontent.com/69770137/95161700-da4b5100-0771-11eb-9225-45004b62f88d.png)
 
   ******
 
@@ -22,7 +24,11 @@
   ******
 
   ### Usage
-  After sucessful installation, open the folder with a code editor (Visual Studio Code is recommended).  
+  After sucessful installation, open the folder with a code editor (Visual Studio Code is recommended) and in the terminal, run 'node index.js' to begin the application.
+  
+  A series of prompts will collect data that will be used to build out the ReadMe later on. Users can make the document as basic or as detailed to start with as is preferred.
+  
+  ![Screen Shot 2020-10-06 at 1 11 37 AM](https://user-images.githubusercontent.com/69770137/95161536-690b9e00-0771-11eb-9e1f-7188d5946de8.png)
 
   ******
 
