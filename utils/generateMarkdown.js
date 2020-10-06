@@ -101,8 +101,6 @@ function generateMarkdown(data) {
 
   ## Description  
 
-  ******
-
   ### ${data.description}  
 
   ******
@@ -110,8 +108,8 @@ function generateMarkdown(data) {
   ## Table of Contents 
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributions](#guidelines)
-  * [Tests](#testing)
+  * [Contributions](#contributions)
+  * [Tests](#tests)
   * [License](#license)
   * [Questions](#questions)  
   
@@ -144,7 +142,7 @@ function generateMarkdown(data) {
 
   ##### Questions
 
-  Anything I missed? If you have additional questions, connect with me on [GitHub](https://github.com/${data.ghUsername}) or [email me](MAILTO:${data.email})
+  Anything I missed? If you have additional questions, connect with me on [GitHub](https://github.com/${data.ghUsername}) or send me an [email.](MAILTO:${data.email})
 `;
 }
 
